@@ -7,18 +7,18 @@ using System;
             static void Main(string[] args){
 
                int [] vetor ;
-               int maior =0, posicao = 0;
+               int menor =1000000000, posicao = 0;
                vetor = le_Vetor();
                for (int i =0; i<vetor.Length;i++){
                 
-                if (vetor[i]>maior){
-                    maior = vetor[i];
+                if (vetor[i]<menor){
+                    menor = vetor[i];
                     posicao = i;
                 }
 
                }
-               
-             Console.WriteLine("o maior número do vetor é: "+maior+"\nna poisição: "+posicao);
+
+             Console.WriteLine("o menor número do vetor é: "+menor+"\nna poisição: "+posicao);
 
              }
 
@@ -33,8 +33,7 @@ using System;
 
                 return vetor;
 
-             }
-   
-   }
- }
-
+            }
+            
+    }
+  }           

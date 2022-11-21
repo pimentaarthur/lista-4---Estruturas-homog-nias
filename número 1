@@ -24,7 +24,7 @@ using System;
 
             static int [] le_Vetor(){
 
-                int [] vetor = new int [5];
+                int [] vetor = new int [20];
 
                 for(int i = 0;i<vetor.Length;i++){
                     Console.WriteLine("informe os 20 números do vetor");

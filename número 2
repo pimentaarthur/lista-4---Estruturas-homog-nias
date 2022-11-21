@@ -1,0 +1,58 @@
+using System;
+
+    namespace num2{
+
+        class num2{
+
+            static void Main(string[] args){
+
+               double [] vetor = Ler_Notas();
+               Recebe_Vetor(vetor);
+            }
+
+            static double [] Ler_Notas(){
+
+                double [] vetor = new double [10];
+
+                    for(int i = 0;i<vetor.Length;i++){
+
+                        Console.WriteLine("informe a nota do aluno: "+i);
+                        vetor[i] = double.Parse(Console.ReadLine());
+                    }
+                    return vetor;
+
+
+            }
+
+            static void Recebe_Vetor(double [] vetor){
+
+                double media = 0, nota_total =0;
+                int alunos_media=0;
+
+                for(int i=0;i<vetor.Length;i++){
+
+                    nota_total = vetor[i] + nota_total;
+
+                }
+                media = nota_total/10;
+
+                for(int j=0;j<vetor.Length;j++){
+                    if (vetor[j]>=media){
+                        alunos_media++;
+                    }
+                }
+                Console.WriteLine("Média da turma = "+media+"\nAlunos acima da média = "+alunos_media);
+
+
+
+            }
+               
+   }
+
+  }
+
+           
+             
+  
+                
+                

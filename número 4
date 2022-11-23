@@ -1,0 +1,46 @@
+using System;
+
+    namespace num1{
+
+        class num1{
+
+            static void Main(string[] args){
+                int[] vetorA = Ler_Vetor(), vetorB = Ler_Vetor();
+                int[] vetor_total = new int [10];
+
+                for(int i = 0;i<vetorA.Length;i++){
+
+                    if(i%2==1){
+
+                        vetor_total[i]= vetorA[i];
+                    }
+                    else if (i%2==0){
+                        vetor_total[i]= vetorB[i];
+                    }
+                    Console.WriteLine("\n"+vetor_total[i]);
+                }
+                
+                
+            
+            }
+
+            static int [] Ler_Vetor(){
+
+                int [] vetor = new int [10];
+
+                    for(int i = 0;i<vetor.Length;i++){
+
+                        Console.WriteLine("informe um valor.");
+                        vetor[i] = int.Parse(Console.ReadLine());
+                    }
+                    return vetor;
+
+
+            }
+
+           
+
+            }
+}
+
+

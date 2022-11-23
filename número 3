@@ -7,9 +7,10 @@ using System;
             static void Main(string[] args){
 
                double [] vetor = Ler_Notas();
-               Recebe_vetor(vetor);
-               Console.WriteLine(vetor);
-            
+               vetor = Recebe_vetor(vetor);
+               for(int i = 0;i<vetor.Length;i++){
+               Console.WriteLine(vetor[i]);
+               }
             }
 
             static double [] Ler_Notas(){

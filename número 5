@@ -1,0 +1,40 @@
+using System;
+
+    namespace num1{
+
+        class num1{
+
+            static void Main(string[] args){
+
+                int[] vetor = Sorteador();
+
+                Console.WriteLine("vamos jogar um jogo, você tem que acertar alguns dos números sorteados entre 10 e 50.");
+                int resposta = int.Parse(Console.ReadLine());
+                
+
+                    while(resposta!=vetor[0]&&resposta!=vetor[1]&&resposta!=vetor[2]){ 
+                        Console.WriteLine("você errou tente denovo");
+                        resposta = int.Parse(Console.ReadLine());
+
+                      //  Console.WriteLine("Os números sáo "+vetor[0]+" "+vetor[1]+" "+vetor[2]+" e você digitou: "+resposta);
+
+                   }
+                    Console.WriteLine("você acertou!!!\nos números eram "+vetor[0]+" "+vetor[1]+" "+vetor[2]);
+
+             
+            }
+
+            static int [] Sorteador(){
+
+                int[] vetor = new int[3];
+                Random valor = new Random();
+
+                for (int i=0;i<vetor.Length;i++){
+                       vetor[i] = valor.Next(10,51);
+                }
+                return vetor;
+            } 
+}
+}
+
+           

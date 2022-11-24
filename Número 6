@@ -1,0 +1,46 @@
+using System;
+
+    namespace num1{
+
+        class num1{
+
+            static void Main(string[] args){
+                int [] vetor = Sorteador();
+                int menor = 41, maior = 0, temp_total=0,menor_tempmedia = 0;
+                double temp_media = 0;
+                for (int i=0;i<vetor.Length;i++){
+
+                    if(vetor[i]>maior){
+                        maior = vetor[i];
+                    }
+                    if(vetor[i]<menor){
+                        menor = vetor[i];
+                    }
+
+                    temp_total = vetor[i]+temp_total;
+                
+                }
+                temp_media = temp_total/31;
+                for(int i=0;i<vetor.Length;i++){
+                    if(vetor[i]<temp_media){
+                        menor_tempmedia++;
+                    }
+
+                }
+                Console.WriteLine("Maior temperatura = "+maior+"\nMenor temperatura = "+menor+"\nTemperatura media = "+temp_media+"\nNúmero de dias nos quais a temperatura foi inferior a temperatura média = "+menor_tempmedia);
+            }
+
+            static int [] Sorteador(){
+
+                int[] vetor = new int[31];
+                Random valor = new Random();
+
+                for (int i=0;i<vetor.Length;i++){
+                       vetor[i] = valor.Next(15,41);
+                }
+                return vetor;
+            } 
+}
+}
+
+           
